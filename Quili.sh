@@ -155,7 +155,7 @@ fi
 git clone https://source.quilibrium.com/quilibrium/ceremonyclient.git
 
 # 进入 ceremonyclient/node 目录
-cd ceremonyclient/node 
+cd ~/ceremonyclient/node 
 git switch release-cdn
 
 # 赋予执行权限
