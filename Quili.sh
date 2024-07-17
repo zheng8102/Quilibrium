@@ -66,17 +66,14 @@ source /root/.gvm/scripts/gvm
 ARCH=$(uname -m)
 
 # 安装并使用go1.4作为bootstrap
-gvm install go1.4 -B
 gvm use go1.4
 export GOROOT_BOOTSTRAP=$GOROOT
 
 # 根据系统架构安装相应的Go版本
 if [ "$ARCH" = "x86_64" ]; then
-  gvm install go1.17.13
   gvm use go1.17.13
   export GOROOT_BOOTSTRAP=$GOROOT
 
-  gvm install go1.20.2
   gvm use go1.20.2
 elif [ "$ARCH" = "aarch64" ]; then
   gvm install go1.17.13 -B
@@ -91,7 +88,6 @@ else
 fi
 
 
-git clone https://source.quilibrium.com/quilibrium/ceremonyclient.git
 
 # 进入ceremonyclient/node目录
 cd ceremonyclient/node 
@@ -136,11 +132,9 @@ export GOROOT_BOOTSTRAP=$GOROOT
 
 # 根据系统架构安装相应的 Go 版本
 if [ "$ARCH" = "x86_64" ]; then
-  gvm install go1.17.13
   gvm use go1.17.13
   export GOROOT_BOOTSTRAP=$GOROOT
 
-  gvm install go1.20.2
   gvm use go1.20.2
 elif [ "$ARCH" = "arm64" ] || [ "$ARCH" = "aarch64" ]; then
   gvm install go1.17.13 -B
