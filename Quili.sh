@@ -92,7 +92,7 @@ fi
 
 
 # 进入ceremonyclient/node目录
-cd ceremonyclient/node 
+cd ~/ceremonyclient/node 
 
 git switch release-cdn
 
