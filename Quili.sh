@@ -59,7 +59,6 @@ sudo apt update && sudo apt -y upgrade
 sudo apt install git ufw bison screen binutils gcc make bsdmainutils cpulimit gawk -y
 
 # 下载并安装gvm
-bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 source /root/.gvm/scripts/gvm
 
 # 获取系统架构
@@ -75,6 +74,7 @@ if [ "$ARCH" = "x86_64" ]; then
   gvm install go1.17.13
   gvm use go1.17.13
   export GOROOT_BOOTSTRAP=$GOROOT
+  
   gvm install go1.20.2
   gvm use go1.20.2
 elif [ "$ARCH" = "aarch64" ]; then
